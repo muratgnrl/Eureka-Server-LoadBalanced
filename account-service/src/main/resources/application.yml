@@ -1,0 +1,21 @@
+server:
+  port: 8282
+
+# Veritaban? yap?land?rmas?
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/account
+    username: root
+    password: password
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        ddl-auto: create-drop
+    show-sql: true
+
+# Eureka sunucusu yap?land?rmas?
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
